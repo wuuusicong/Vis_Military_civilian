@@ -1,0 +1,254 @@
+body{
+    overflow: hidden;
+}
+.xline {
+    stroke: black;
+    stroke-width: 2px;
+}
+.x_tick_Line {
+    stroke: black;
+    stroke-width: 1px;
+}
+.node {
+    stroke: black;
+    fill-opacity: 0.9;
+}
+.ribbon {
+    fill: lightgray;
+    fill-opacity: 0.6;
+}
+#all_container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    /*justify-content: center;*/
+}
+#container{
+    /*display: flex;*/
+    flex-direction: column;
+    width:50%;
+    height:100%;
+    /*opacity: 0;*/
+    display: none;
+}
+#container2{
+    width:100%;
+    height:100%;
+    opacity:1;
+}
+#container_canvas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#canvas{
+    margin-top: -5rem;
+}
+#container_Down{
+    width: 100%;
+    height: 50%;
+    /*background: #61dafb;*/
+    margin-bottom: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: -5.5rem;
+}
+#container_Left{
+    width: 100%;
+    height: 100%;
+    /*background: #ffff22;*/
+    margin-left: 1%;
+    /*margin-bottom: 1%;*/
+}
+#container_Right{
+    width: 48%;
+    height: 100%;
+    /*background: #000000;*/
+    margin-right: 1%;
+    /*margin-bottom: 1%;*/
+}
+#containerLeftDown{
+    width: 100%;
+    height: 48%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#canvas_circle{
+    margin-top: -3rem;
+}
+#DivLine{
+    margin-top: 2.5rem;
+}
+#containerLeftTop{
+    width: 100%;
+    height: 55%;
+}
+#containerLeft{
+    overflow: hidden;
+}
+#Down_text{
+    position: relative;
+    top: 70%;
+}LineSvg
+#text1{
+    position: absolute;
+    top:2%;
+    text-align: center;
+    width: 100%;
+}
+.tooltip{
+    position: absolute;
+    width: 300px;
+    height: auto;
+    text-align: start;
+    font-family: simsun;
+    font-size: 14px;
+    /*background: url("bg.jpg");*/
+    background-color: #78bced;/*998ec3*/
+    border-width: 2px solid white;
+    border-radius: 5px;
+    z-index: 99999999999999;
+    opacity: 0.3;
+}
+.toolDiv{
+    font-weight: bold;
+    color: white;
+    margin:  10px 10px;
+    line-height: 30px;
+}
+.tooltip:after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 20%;
+    margin-left: -40px;
+    width: 0;
+    height: 0;
+    border-bottom: 12px solid #78bced;
+    border-right: 12px solid transparent;
+    border-left: 12px solid transparent;
+}
+.toolBr{
+    border-top: 1px white dashed;
+    width: 100%;
+    height: 1px;
+    margin-bottom: -1px;
+}
+#leafLetMap{
+    height: 100%;
+    width: 100%;
+    margin: auto;
+}
+#fourWord{
+    width:90%;
+    height:92%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 1px dashed black;
+    margin-left: auto;
+    margin-right: auto;
+}
+.detailWord{
+    width: 50%;
+    height: 50%;
+    /*background: #61dafb;*/
+}
+.dashLine{
+    width: 100%;
+    height: 74px;
+}
+#LineSvg{
+    margin-top: 1rem;
+}
+#id-93{
+    display: none;
+}
+#w2{
+    border-right: 1px dashed black;
+    border-bottom: 1px dashed black;
+}
+#w3{
+    border-bottom: 1px dashed black;
+}
+#w4{
+    border-right: 1px dashed black;
+}
+.w2text,.w3text,.w4text,.w5text{
+    position: absolute;
+}
+.w2text,.w4text{
+    transform:rotate(-90deg);
+    margin-top: 2rem;
+    margin-left: -2.5rem;
+}
+.w3text,.w5text{
+    transform:rotate(90deg);
+    margin-top: 2rem;
+    margin-left: 30rem;
+}
+#returnDiv{
+    position: absolute;
+    font-family: "Adobe 楷体 Std R";
+    font-size: 15px;
+    margin-top: -1.2rem;
+    color: #4e8bdc;
+}
+#leafLetMap{
+    background: #fff;
+}
+.leaflet-bottom{
+    display: none;
+}
+.foreign{
+    border-radius: 50%;
+    line-height: 20px;
+    color:#666666;
+}
+#remember{
+    position: absolute;
+    left: 83%;
+    top: 87%;
+    color: #282c34;
+    z-index: 999999;
+}
+#labelColor{
+    position: absolute;
+    left: 83%;
+    top: 32%;
+    display: flex;
+    flex-direction: row;
+    z-index: 999999;
+    width: 240px;
+    flex-wrap: wrap;
+}
+.labelOne{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+.labelOne2{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    /*line-height: 1.42857143;*/
+    line-height: 2;
+    font-weight: bold;
+    margin-left: 5px;
+}
+.labelOne1{
+    height: 10px;
+    width: 15px;
+    margin-top: 9px;
+    opacity: 0.4;
+}
+.labelOne1:hover{
+    height: 20px;
+    width: 30px;
+    margin-top: 5px;
+    margin-left: -5px;
+}

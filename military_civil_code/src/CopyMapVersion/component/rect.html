@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="https://cdn.bootcss.com/d3/3.5.15/d3.js"></script>
+<script>
+    let width = 400;
+    let height = 400;
+    let svg = d3.select("body").append('svg')
+        .attr("width",width)
+        .attr("height",height);
+    let padding = {top:20,right:20,bottom:20,left:20};
+    let RectStep = 35;
+    let RectWidth = 30;
+    let dataset = [50,43,120,87,99,167,142];
+    svg.selectAll('rect')
+        .data(dataset)
+        .enter()
+        .append("rect")
+        .attr("x",(d,i) => {
+            return padding.left + i*RectStep;
+        })
+        .attr("y",(d,i) => {
+            return height - padding.bottom - d;
+        })
+        .attr("width",RectWidth)
+        .attr("height",(d,i) => d)
+        .attr("fill","skyblue");
+    svg.selectAll("text")
+        .data(dataset)
+        .enter()
+        .append("text")
+        .attr("x",(d,i) => {
+            return padding.left + i*RectStep;
+        })
+        .attr("y",(d,i) => {
+            return   height - padding.bottom -d
+        })
+        .attr("text-anchor","middle")
+        .attr("fill","black")
+        .attr("dx",RectWidth/2)
+        .attr("dy","1em")
+        .text((d,i) => {
+            return d;
+        });
+
+    function draw() {
+        let updateRect = svg.selectAll("rect")
+            .data(dataset);
+        let enterRect = updateRect.enter();
+        let exitRect = updateRect.exit();
+
+        updateRect.attr("fill","skyblue")
+            .attr("x",(d,i) => {
+                return padding.left + i*RectStep
+            })
+            .attr("y",(d,i) => {
+                return height - padding.bottom - d;
+            })
+            .attr("width",RectWidth)
+            .attr("height",d => d);
+        enterRect.append("rect")
+            .attr("fill","skyblue")
+            .attr("x",(d,i) => {
+                return padding.left + i*RectStep
+            })
+            .attr("y",(d,i) => {
+                return height - padding.bottom - d;
+            })
+            .attr("width",RectWidth)
+            .attr("height",d => d);
+        exitRect.remove();
+        svg.selectAll("text").remove();
+        svg.selectAll("text")
+            .data(dataset)
+            .enter()
+            .append("text")
+            .attr("x",(d,i) => {
+                return padding.left + i*RectStep;
+            })
+            .attr("y",(d,i) => {
+                return   height - padding.bottom -d
+            })
+            .attr("text-anchor","middle")
+            .attr("fill","black")
+            .attr("dx",RectWidth/2)
+            .attr("dy","1em")
+            .text((d,i) => {
+                return d;
+            });
+    }
+    function add() {
+        dataset.push(Math.floor(Math.random()*100));
+        draw();
+    }
+    function sort() {
+        dataset = d3.shuffle(dataset);
+        draw();
+    }
+</script>
+<button  type = "button" onclick="add()">add</button>
+<button  type="button" onclick="sort()">sort</button>
+</body>
+</html>

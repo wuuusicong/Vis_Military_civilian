@@ -1,0 +1,38 @@
+{
+  "name": "civi2",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@amcharts/amcharts4": "^4.4.9",
+    "@antv/data-set": "^0.10.1",
+    "@vx/axis": "^0.0.184",
+    "@vx/scale": "^0.0.182",
+    "@vx/shape": "^0.0.189",
+    "animate": "^1.0.0",
+    "bootstrap": "^3.3.7",
+    "d3": "^3.5.13",
+    "leaflet": "^1.5.1",
+    "popo-react-panel": "^1.0.0",
+    "popojs": "^1.4.1",
+    "react": "^16.8.3",
+    "react-bootstrap": "^1.0.0-beta.9",
+    "react-dom": "^16.6.3",
+    "react-scripts": "2.1.1",
+    "viser-react": "^2.4.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

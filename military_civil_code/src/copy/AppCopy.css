@@ -1,0 +1,238 @@
+.App {
+    text-align: center;
+}
+
+.App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 40vmin;
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+#root {
+    width:100%;
+    height: 100%;
+    /*background-color: #000;*/
+}
+.first{
+    z-index: 9999999999;
+    background-color: #fff;
+    top:0;
+    left: 0;
+    width: 100%;
+}
+.topText{
+    text-align: center;
+    font-size: 2em;
+}
+.anchorBL{
+    display: none;
+}
+.downDraw{
+    position: absolute;
+    bottom: 5px;
+    height: 0;
+    width: 100%;
+    z-index: 999;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: all 2s;
+    -moz-transition: all 2s;
+    -webkit-transition: all 2s;
+    -o-transition:all 2s;
+    display: none;
+    top:75%;
+}
+.downUp{
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: all 2s;
+    -moz-transition: all 2s;
+    -webkit-transition: all 2s;
+    -o-transition:all 2s;
+    display: block;
+}
+.downLeft {
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: all 2s;
+    -moz-transition: all 2s;
+    -webkit-transition: all 2s;
+    -o-transition:all 2s;
+    display: block;
+    right: 0;
+}
+.downRight{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    margin: 0;
+    /*padding: 0;*/
+    overflow: hidden;
+    transition: all 2s;
+    -moz-transition: all 2s;
+    -webkit-transition: all 2s;
+    -o-transition:all 2s;
+    display: flex;
+    color: white;
+    justify-content: center;
+}
+#container{
+    overflow: hidden;
+}
+.wordTitle{
+    position: absolute;
+    text-align: center;
+}
+#canvas_1{
+    /*padding-top: 4.5em;*/
+    transition: all 2s;
+    -moz-transition: all 2s;
+    -webkit-transition: all 2s;
+    -o-transition:all 2s;
+    /*margin-left: -1em;*/
+}
+@keyframes myfirst
+{
+    from {height: 0;}
+    to {height: 25em}
+}
+
+@-moz-keyframes myfirst /* Firefox */
+{
+    from {height: 0;}
+    to {height: 25em}
+}
+
+@-webkit-keyframes myfirst /* Safari 和 Chrome */
+{
+    from {height: 0;}
+    to {height: 25em}
+}
+@-o-keyframes myfirst /* Opera */
+{
+    from {height: 0;}
+    to {height: 25em}
+}
+span{
+    z-index: 9999999;
+}
+.classShadow{
+    left: 0;
+    position: absolute;
+    z-index: 99999;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.shadow{
+    position: relative;
+    height: 10em;
+    width: 16em;
+    /*border-radius:1% 50% 1%/1% 100% 1%;*/
+    border-radius: 50%;
+    margin: auto;
+    /*top:40%;*/
+}
+.topIndex{
+    z-index: 999999;
+    position: relative;
+    color: white;
+}
+.thirdAll{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.thirdNext{
+    height: 95%;
+}
+.sixAll{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.sixNext{
+    height: 100%;
+}
+.sixP{
+    height: 2%;
+}
+h3 {
+    background: #5f9ea0;
+    color: #fff;
+    font-size: 36px;
+    margin: 10px;
+    padding: 2%;
+    position: relative;
+    text-align: center;
+    height: 93%;
+}
+
+.center .slick-center h3 {
+    color: #dde620;
+    opacity: 1;
+    -ms-transform: scale(1.08);
+    transform: scale(1.08);
+}
+.center h3 {
+    opacity: .8;
+    transition: all .3s ease;
+}
+.slick-initialized,.slick-list,.slick-track{
+    height: 100%;
+}
+.center div{
+    height:96%;
+}
+.popo-center>div{
+    height: 100%;
+}
+
+.popo-pane{
+    width: 100%;
+    height: 100%;
+}
+.treeLayout{
+    display: flex;
+    flex-direction: row;
+}
+.leftLayout{
+    height: 100%;
+    background: #61dafb;
+    width: 10%;
+}
